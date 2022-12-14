@@ -1,0 +1,62 @@
+---
+permalink: windows-install/task-upgrade-from-oncommand-workflow-automation-3-1-or-later-on-windows.html 
+sidebar: sidebar 
+keywords: oncommand workflow automation, upgrade, versions, later 
+summary: 'Puede realizar una actualización in situ desde OnCommand Workflow Automation (WFA) 3.1 o versiones posteriores a las versiones más recientes disponibles de WFA para utilizar las nuevas funciones y mejoras.' 
+---
+= Actualice desde OnCommand Workflow Automation 3.1 o versiones posteriores
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede realizar una actualización in situ desde OnCommand Workflow Automation (WFA) 3.1 o versiones posteriores a las versiones más recientes disponibles de WFA para utilizar las nuevas funciones y mejoras.
+
+.Lo que necesitará
+Debe haber descargado el `.exe` Archivo binario del sitio de soporte de NetApp al equipo host de WFA.
+
+.Acerca de esta tarea
+No puede instalar MySQL por su cuenta cuando actualice desde versiones anteriores de WFA. Sin embargo, puede instalar MySQL por su cuenta:
+
+* Durante una instalación nueva de WFA 4.2 y posterior o.
+* Cuando actualice de WFA 4.2 a versiones posteriores de WFA.
+
+
+.Paso
+. Actualice desde WFA 3.1 o versiones posteriores eligiendo uno de los siguientes métodos:
++
+** Instalación interactiva
++
+... Desplácese hasta la `.exe` Archivo binario en el equipo host de WFA y, a continuación, ejecute el archivo.
+... Siga las instrucciones que aparecen en pantalla en el asistente para completar la actualización.
+
+
+** Instalación silenciosa
++
+Introduzca lo siguiente en el símbolo del sistema:
+
++
+`WFA-version_number-build_number.exe /s /v"WFA_ADMIN_USERNAME_UP=wfa username WFA_ADMIN_PASSWORD_UP=password /qr /l*v C:\upgrade.log"`
+
++
+*Ejemplo*:
+
++
+`WFA-x64-v4.2.0.0.0-B2973881.exe /s /v"WFA_ADMIN_USERNAME_UP=admin WFA_ADMIN_PASSWORD_UP=password*123 /qr /l*v C:\upgrade.log"`
+
++
+
+NOTE: La `/qn` La opción no es compatible con WFA.
+
++
+Si desea realizar una actualización silenciosa, debe incluir valores para todos los parámetros de comando:
+
++
+*** _WFA_ADMIN_USERNAME_UP_ es el nombre de usuario de un usuario de WFA que tiene permiso para crear un backup de base de datos WFA.
+*** _WFA_ADMIN_PASSWORD_UP_ es la contraseña del usuario.
+
+
+
+
+

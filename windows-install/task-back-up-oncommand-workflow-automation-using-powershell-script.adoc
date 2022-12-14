@@ -1,0 +1,45 @@
+---
+permalink: windows-install/task-back-up-oncommand-workflow-automation-using-powershell-script.html 
+sidebar: sidebar 
+keywords: back up, wfa, database, powershell, script 
+summary: 'Si desea realizar un backup de la base de datos de OnCommand Workflow Automation (WFA) con frecuencia, puede utilizar el script de PowerShell que se proporciona con el paquete de instalación de WFA.' 
+---
+= Realice una copia de seguridad de la base de datos de WFA con el script de PowerShell
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Si desea realizar un backup de la base de datos de OnCommand Workflow Automation (WFA) con frecuencia, puede utilizar el script de PowerShell que se proporciona con el paquete de instalación de WFA.
+
+.Lo que necesitará
+Debe tener credenciales de usuario administrador, credenciales de arquitecto o credenciales de usuario de backup.
+
+.Acerca de esta tarea
+Para más información, consulte la documentación DE REST.
+
+. Abra Windows PowerShell como usuario administrador y, a continuación, realice una copia de seguridad de la base de datos de WFA:
++
+`<WFA_install_location\WFA\bin\Backup.ps1> -User user_name -Password password -Path backup_file_path`
+
++
+** `WFA_install_location` Es el directorio de instalación de WFA.
+** _user_name_ es el nombre de usuario del usuario administrador, arquitecto o usuario de copia de seguridad.
+** _password_ es la contraseña del usuario administrador, arquitecto o usuario de copia de seguridad.
+** `backup_file_path` es la ruta completa del directorio para el archivo de copia de seguridad.
++
+
+NOTE: El archivo de copia de seguridad es un archivo zip con el nombre con el siguiente formato: + `wfa_backup_servername_.zip`
+
+** `wfa_backup_` es una parte fija del nombre de archivo, que es el nombre del servidor de copia de seguridad.
+** `servername` Se extrae del entorno del servidor Windows.
+** `_.zip` es una parte fija del nombre de archivo. + *ejemplo* +
+`C:\Program Files\NetApp\WFA\bin\Backup.ps1 -User backup -Password MyPassword123 -Path C:\WFA_backups\backup_10_08_12`
++
+Una vez completado el backup, se muestra la siguiente salida: `C:\WFA_backups\backup_10__08_12\wfa_backup_myserver__.zip`
+
+
+
+. *Opcional:* Compruebe que el archivo de copia de seguridad se creó en la ubicación especificada.
+

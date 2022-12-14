@@ -1,0 +1,43 @@
+---
+permalink: workflows/task-add-entity-to-a-workflow-automation-pack.html 
+sidebar: sidebar 
+keywords: oncommand workflow automation, add, entities, wfa, workflow, packs 
+summary: 'Puede añadir una o varias entidades a un paquete de flujos de trabajo en OnCommand Workflow Automation (WFA) para satisfacer sus requisitos de automatización e integración del almacenamiento.' 
+---
+= Añada entidades a los paquetes de flujo de trabajo de WFA
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede añadir una o varias entidades a un paquete de flujos de trabajo en OnCommand Workflow Automation (WFA) para satisfacer sus requisitos de automatización e integración del almacenamiento.
+
+.Acerca de esta tarea
+Puede quitar un paquete de las siguientes entidades:
+
+* Flujo de trabajo
+* Buscadores
+* Filtros
+* Comandos
+* Empresarial
+* Plantillas
+* Esquemas
+* Diccionario
+* Tipos de orígenes de datos
+* Tipos de sistemas remotos
+* Consultas en caché
+* Categorías
+
+
+.Pasos
+. Inicie sesión en la ventana *WFA* a través de un navegador web.
+. Haga clic en *Diseñador* > *<Entities>*.
+. En la ventana entidad, seleccione la entidad que desea agregar al paquete.
+. Haga clic en el icono *Agregar al paquete*.
++
+"'Agregar a paquete'" sólo está activado para las entidades a las que se ha establecido la certificación `None`.
+
+. En el cuadro de diálogo *Agregar a paquete <Entity>*, en la lista desplegable *Paquetes disponibles*, seleccione el paquete al que desea agregar la entidad.
+. Haga clic en *Aceptar*.
+

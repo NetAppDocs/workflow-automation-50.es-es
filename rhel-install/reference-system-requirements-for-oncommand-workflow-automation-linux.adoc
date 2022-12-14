@@ -1,0 +1,109 @@
+---
+permalink: rhel-install/reference-system-requirements-for-oncommand-workflow-automation-linux.html 
+sidebar: sidebar 
+keywords: oncommand workflow automation, system, requirements, install, hardware, requirements, install, wfa 
+summary: 'Debe estar al tanto de los requisitos de hardware y software de OnCommand Workflow Automation (WFA) antes de instalar WFA.' 
+---
+= Requisitos del sistema para instalar OnCommand Workflow Automation
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Debe estar al tanto de los requisitos de hardware y software de OnCommand Workflow Automation (WFA) antes de instalar WFA.
+
+
+
+== Requisitos de hardware para instalar WFA
+
+En la siguiente tabla se enumeran los requisitos mínimos de hardware y las especificaciones de hardware recomendadas para el servidor de WFA.
+
+[cols="3*"]
+|===
+| Componente | Requisitos mínimos | Especificaciones recomendadas 
+
+
+ a| 
+CPU
+ a| 
+2.27 GHz o superior, 2 núcleos y 64 bits
+ a| 
+2.27 GHz o superior, 2 núcleos y 64 bits
+
+
+
+ a| 
+RAM
+ a| 
+4 GB
+ a| 
+8 GB
+
+
+
+ a| 
+Libere espacio en disco
+ a| 
+5 GB
+ a| 
+20 GB
+
+|===
+[NOTE]
+====
+Si está instalando WFA en una máquina virtual (VM), debe reservar la memoria y la CPU necesarias para que la máquina virtual tenga suficientes recursos. El instalador no verifica la velocidad de la CPU.
+
+====
+
+
+== Requisitos de software para la instalación de WFA
+
+La tabla siguiente muestra todas las versiones del sistema operativo que son compatibles con el servidor WFA.
+
+[cols="2*"]
+|===
+| Sistema operativo | Versión 
+
+
+ a| 
+Red Hat Enterprise Linux
+ a| 
+sistemas operativos de 6.5, 7.0, 7.1 64 bits, 7.2, 7.3 y 7.4
+
+
+
+ a| 
+CentOS
+ a| 
+7.1, 7.2 y 7.3
+
+|===
+[NOTE]
+====
+WFA debe instalarse en máquinas físicas o máquinas virtuales dedicadas. No debe instalar ninguna otra aplicación en el servidor que ejecute WFA.
+
+====
+
+
+== Otro software mínimo requerido
+
+* Uno de los siguientes exploradores compatibles:
++
+** Mozilla Firefox
+** Internet Explorer de Microsoft
+** Google Chrome
+
+
+* La última versión de Adobe Flash Player para su navegador
+* Perl v5.10.1
++
+Puede obtener información sobre los módulos Perl que deben instalarse utilizando el `./WFA-version_number.bin -l` comando.
+
+
+
+Para obtener más detalles, consulte la herramienta de matriz de interoperabilidad.
+
+*Información relacionada*
+
+http://mysupport.netapp.com/matrix["Herramienta de matriz de interoperabilidad de NetApp"^]

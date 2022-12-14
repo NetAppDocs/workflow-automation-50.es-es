@@ -1,0 +1,63 @@
+---
+permalink: rhel-install/task-upgrade-openjdk-on-linux-ocum.html 
+sidebar: sidebar 
+keywords: oncommand, workflow, automation, upgrade, jre, linux 
+summary: 'Puede actualizar a una versión más reciente de Java Runtime Environment (JRE) en el servidor Linux en el que está instalado OnCommand Workflow Automation para obtener soluciones para vulnerabilidades de seguridad.' 
+---
+= Actualice JRE en Linux
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede actualizar a una versión más reciente de Java Runtime Environment (JRE) en el servidor Linux en el que está instalado OnCommand Workflow Automation para obtener soluciones para vulnerabilidades de seguridad.
+
+.Lo que necesitará
+Debe tener privilegios raíz para el sistema Linux en el que está instalado WFA.
+
+
+NOTE: Puede actualizar desde una actualización de JRE 1.8 a una actualización posterior de JRE 1.8. No es posible actualizar a una versión principal posterior de JRE, como Java 9. Por ejemplo, no puede actualizar Java 8 update 144 (64 bits) a Java 8 update 151 (64 bits) o de Java 8 a Java 9.
+
+.Pasos
+. Inicie sesión como usuario raíz en el equipo host de WFA.
+. Descargue la versión adecuada de Java (64 bits) en el sistema de destino.
+. Antes de actualizar JRE, ejecute los siguientes comandos para enumerar el cifrado y las claves de licencia para WFA:
++
+`/opt/netapp/wfa/bin/wfa -K`
+
++
+Devuelve la clave de cifrado, por ejemplo:
+
++
+`Key: oidMG6GbIuHjdZG30JgFng==`
+
++
+`/opt/netapp/wfa/bin/wfa --license`
+
++
+De esta forma, se devuelve la clave de licencia, por ejemplo:
+
++
+`Key: MS8xLzIwOTkgMTE6NTkgUE0=`
+
++
+Guarde estas claves según sea necesario para volver a configurar las claves durante la actualización de JRE.
+
+. Detenga los servicios de WFA:
++
+`service wfa-server stop`
+
+. Instale el JRE más reciente en el sistema.
+. Para actualizar el JRE, vuelva a configurar las claves guardadas en el paso 3 utilizando los siguientes comandos:
++
+`/opt/netapp/wfa/bin/wfa --license=MS8xLzIwOTkgMTE6NTkgUE0=`
+
++
+`/opt/netapp/wfa/bin/wfa -K=oidMG6GbIuHjdZG30JgFng==`
+
+. Inicie los servicios de WFA:
++
+`service wfa-server start`
+
+

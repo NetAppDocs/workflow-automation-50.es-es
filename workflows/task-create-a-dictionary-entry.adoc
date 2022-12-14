@@ -1,0 +1,42 @@
+---
+permalink: workflows/task-create-a-dictionary-entry.html 
+sidebar: sidebar 
+keywords: create, dictionary, entry 
+summary: Puede crear una entrada del diccionario de WFA si desea definir un nuevo tipo de objeto y su relación en el entorno de almacenamiento. 
+---
+= Crear una entrada de diccionario
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede crear una entrada del diccionario de WFA si desea definir un nuevo tipo de objeto y su relación en el entorno de almacenamiento.
+
+.Pasos
+. Haga clic en *Diseñador* > *Diccionario*.
+. Haga clic en image:../media/new_wfa_icon.gif["Icono nuevo"] en la barra de herramientas.
+. En el cuadro de diálogo *Nueva entrada de diccionario*, introduzca los detalles necesarios en los campos *Nombre del tipo de objeto* y *Descripción*.
+. Para el campo *Esquema*, realice una de las siguientes acciones:
++
+** Seleccione uno de los esquemas disponibles de la lista.
+** Haga clic en *Agregar nuevo esquema*, introduzca el *Nombre de esquema* requerido en el cuadro de diálogo Nuevo esquema y, a continuación, haga clic en *Agregar*.
+
+
+. Haga clic en *Agregar fila* y realice los pasos siguientes para describir el atributo:
++
+.. Haga clic en la `Name` e introduzca el nombre del atributo.
+.. Desde la `Type` seleccione el tipo requerido.
++
+La `String Length` la columna se rellena y se puede editar si seleccionó la cadena como tipo. También, el `Values` la columna se puede editar si ha seleccionado *enum* como tipo.
+
+.. Seleccione las casillas de verificación adecuadas para el atributo en `Natural Key, To be Cached`, y. `Can be Null` columnas.
++
+Si ha seleccionado la casilla de verificación *clave natural* , no podrá activar la casilla de verificación *puede ser nula* .
+
+.. Agregue los atributos necesarios para el objeto de diccionario.
+.. *Opcional:* Active la casilla de verificación *valores de las columnas de clave natural distinguen entre mayúsculas y minúsculas* si desea que las claves naturales sean sensibles a mayúsculas y minúsculas.
+
+
+. Haga clic en *Guardar*.
+

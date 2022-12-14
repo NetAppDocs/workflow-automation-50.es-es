@@ -1,0 +1,22 @@
+---
+permalink: rhel-install/task-create-a-support-case-for-wfa.html 
+sidebar: sidebar 
+keywords: create, support, case, oncommand workflow automation 
+summary: 'Puede crear casos de soporte para problemas de OnCommand Workflow Automation (WFA) que requieran ayuda del soporte técnico. Debe usar la plantilla de evaluación técnica para crear un caso de soporte.' 
+---
+= Crear un caso de soporte para OnCommand Workflow Automation
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede crear casos de soporte para problemas de OnCommand Workflow Automation (WFA) que requieran ayuda del soporte técnico. Debe usar la plantilla de evaluación técnica para crear un caso de soporte.
+
+.Acerca de esta tarea
+La plantilla de clasificación técnica para WFA proporciona toda la información necesaria para crear un caso de soporte. Debe utilizar las preguntas y la información de la plantilla de evaluación técnica para construir el problema, lo que ayuda a mejorar el tiempo necesario para la resolución del caso.
+
+.Pasos
+. Acceda a la plantilla de evaluación técnica de WFA.
+. Use la plantilla para construir y enviar el caso al soporte técnico.
+
